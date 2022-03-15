@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- Endpoint: https://singulars2022.free.beeceptor.com -->
+    <form action="./" method="POST" class="container">
+        <h1>Formulario Test</h1>
+        <!-- Nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Juan Pablo" maxlength="50" required>
+
+        <!-- Edad -->
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" placeholder="26" max="99" min="18" required>
+
+        <!-- DNI -->
+        <labe for="dni">DNI</label>git
+        <input type="text" name="dni" id="dni" placeholder="12345678A" maxlength="9" pattern="[0-9]{8}[A-Za-z]{1}" required>
+
+        <!-- Ciudad -->
+        <label for="ciudad">Ciudad de origen</label>
+        <input type="text" name="ciudad" id="ciudad" placeholder="Badalona" maxlength="100" required>
+
+        <!-- Trayecto -->
+        <label for="trayecto">¿Como vienes a estudiar?</label>
+        <select name="trayecto" id="trayecto" required>
+            <option value="1" selected>A pie</option>
+            <option value="2">Transporte publico</option>
+            <option value="3">Transporte privado</option>
+        </select>
+
+        <!-- Objetivo -->
+        <label for="objetivos">Objetivos del curso</label>
+        <textarea name="objetivos" id="objetivos" maxlength="1024" placeholder="Actualizar conocimientos y encontrar trabajo"></textarea>
+
+        <!-- Sobre mi -->
+        <label for="sobreMi">
+            Tres cosas sobre ti <small>Una de ellas falsa</small>
+        </label>
+        <!-- Boton de envio -->
+        <textarea name="sobreMi" id="sobreMi" placeholder="1.Soy lord de sealand 2.Soy un Boyscout 3.Vivo con mi pareja"></textarea>
+        <input type="submit">
+    </form>
+</body>
+</html>
